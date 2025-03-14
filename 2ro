@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url('C:/Users/Public/Documents/marble.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+    }
+    .container{
+        flex-wrap: wrap;
+        background-color: white;
+        height: 500px;
+        width: 600px;
+        margin:auto;
+        margin-top: 6%;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+    }
+    input{
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid rgb(155, 155, 155);
+        border-radius: 10px;
+    }
+    button{
+        width: 83%;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 10px;
+        background: rgb(24, 24, 24);
+        color: white;
+        cursor: pointer;
+    }
+    p{
+        padding: 2px;
+        margin: 2px;
+        margin-right: 65%;
+    }
+</style>
+<body>
+    <script>
+        function onClick(){
+            var email = document.getElementsByClassName("Email")[0].value;
+            var pass = document.getElementsByClassName("Password")[0].value;
+            var name = document.getElementsByClassName("Name")[0].value;
+            var surn = document.getElementsByClassName("Surname")[0].value;
+            if (email == "") {
+                document.getElementsByClassName("error1")[0].style.display = "inline-block";
+            }
+            else{
+                document.getElementsByClassName("error1")[0].style.display = "none";
+            }
+            if (pass == "") {
+                document.getElementsByClassName("error2")[0].style.display = "inline-block";
+            }
+            else{
+                document.getElementsByClassName("error2")[0].style.display = "none";
+            }
+            if (name == "") {
+                document.getElementsByClassName("error3")[0].style.display = "inline-block";
+            }
+            else{
+                document.getElementsByClassName("error3")[0].style.display = "none";
+            }
+            if (surn == "") {
+                document.getElementsByClassName("error4")[0].style.display = "inline-block";
+            }
+            else{
+                document.getElementsByClassName("error4")[0].style.display = "none";
+            }
+        }
+    </script>
+    <div class="container">
+        <h2>Register</h2>
+        <input type="email" placeholder="Email" class="Email">
+        <input type="password" placeholder="password">
+        <input type="password" placeholder="retype password" class="Password">
+        <input type="Name" placeholder="Name" class="Name">
+        <input type="Surname" placeholder="Surname" class="Surname">
+        <button onclick="onClick()">Register</button>
+        <p class="error1" style="display: none; color: red;">*Input valid Email</p>
+        <p class="error2" style="display: none; color: red;">*Retype password</p>
+        <p class="error3" style="display: none; color: red;">*Input your name</p>
+        <p class="error4" style="display: none; color: red;">*Input your surname</p>
+    </div>
+</body>
+</html>
